@@ -1,0 +1,140 @@
+
+<ng-container>
+
+    <div class="container m-3">
+        <div class="row">
+            <div class="col-lg-4">
+                <img src="../../../assets/images/todo.png" height="700px" width="500px" alt="">
+            </div>
+            <div class="col-lg-8">
+
+                <div class="input-group mb-3 w-100">
+
+                    <div class="col-md-3">
+                        <div class="form-group">
+                        <label for="details" style="font-weight: 600; color: #d90505;" class="float-direction-left">Turf Name
+    
+                        </label>
+                        <input type="text" readonly  [(ngModel)]="slotObj.turfName" onDrag="return false" onDrop="return false" onPaste="return false"
+                        class="mb-1 form-control text-direction-left"placeholder="Turf Name"/>
+
+                  
+                        </div></div>
+
+                       
+                        <div class="col-md-1">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                <label for="details" style="font-weight: 600; color: #d90505;" class="float-direction-left">Slot Time
+            
+                                </label>
+                                <input type="text" readonly  [(ngModel)]="slotObj.time" onDrag="return false" onDrop="return false" onPaste="return false"
+                                class="mb-1 form-control text-direction-left"placeholder=""/>
+        
+                          
+                                </div></div>
+                 
+                        <!-- <div class="col-lg-6 col-md-12">
+                            <input type="text" name="todo" 
+                            placeholder="enter todo" class="form-control"
+                            [(ngModel)]="slotObj.playerName"
+                            >
+                            </div> -->
+               
+                
+                
+                
+                </div>
+
+                
+
+                <div class="input-group mb-3 w-100">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                        <label for="details" style="font-weight: 600; color: #d90505;" class="float-direction-left">per head
+    
+                        </label>
+                        <input type="text" name="todo"  readonly
+                        placeholder="per head" class="form-control"
+                        [(ngModel)]="slotObj.perHead"
+                        >
+
+                  
+                        </div></div>
+
+                        <div class="col-md-1">
+                            </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                            <label for="details" style="font-weight: 600; color: #d90505;" class="float-direction-left">Payee Name
+        
+                            </label>
+                            <input type="text" readonly   [(ngModel)]="slotObj.payeeName" onDrag="return false" onDrop="return false" onPaste="return false"
+                            class="mb-1 form-control text-direction-left"placeholder=""/>
+    
+                      
+                            </div></div>
+                
+                
+                </div>
+
+
+                <div class="input-group mb-3 w-100">
+                </div><div class="input-group mb-3 w-100">
+                </div>
+
+                <!-- <div class="input-group mb-3 w-100">
+                    <input type="text" name="todo" 
+                    placeholder="enter todo" class="form-control"
+                    [(ngModel)]="slotObj.playerName"
+                    >
+                <div class="input-group-append">
+                    <button class="btn btn-primary" (click)="addPlayer()">Add Players</button>
+                </div>
+                
+                
+                
+                </div> -->
+
+                
+                
+    
+    
+          <ul class="list-group w-100" *ngFor="let player of slotObj?.playerList">
+        <li class="list-group-item d-flex justify-content-between w-100">
+            <span>
+                <input type="checkbox" [checked]="player.status"  >
+            </span>
+            
+            <span [ngClass]="{completedTodo : player.status===1}">
+                <span style="font-weight: 600; color: #383838;">name: </span> {{player.playerName| titlecase}}
+            </span>
+    
+            <span [ngClass]="{completedTodo : player.status===1}">
+               <span style="font-weight: 600; color: #383838;">paid date: </span> {{player.paidDate| titlecase}}
+            </span>
+            <span [ngClass]="{completedTodo : player.status===1}">
+                <span style="font-weight: 600; color: #383838;" >status: </span> {{player.status| titlecase}}
+                
+            </span>
+            <span>
+                <fa-icon [icon]="faDownload" *ngIf="player.isAttachmentPresent" title="download screenshot"></fa-icon>
+            </span>
+            <span *ngIf="player.status==='Not Paid'" [ngClass]="{completedTodo : player.status===1}">
+                <button> Pay now</button>
+            </span>
+    
+            <span>
+                <fa-icon [icon]="faTrash" ></fa-icon>
+            </span>
+    
+        </li>
+    </ul>
+            </div>
+        </div>
+        
+        
+        </div>
+</ng-container>

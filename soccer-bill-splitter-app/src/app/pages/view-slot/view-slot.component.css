@@ -1,0 +1,8 @@
+.completedTodo{
+    color:darkgray;
+    text-decoration: line-through;
+}
+
+.soccer-rev-table {
+    direction: ltr;
+  }

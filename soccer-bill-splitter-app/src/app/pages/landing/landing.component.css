@@ -1,0 +1,49 @@
+.distributor-name{
+  cursor: pointer;
+  /* margin-left: 8px; */
+}
+.distributor-name:hover{
+  text-decoration: underline;
+}
+
+.QuantitySpan{
+  color: #a0a0a0;
+  font-size: 13px;
+  font-weight: 400;
+  border-radius: 4px;
+  line-height: 24px;
+}
+.navCountList a{
+  padding: 2px 0px;
+  /* padding-right: 8px; */
+}
+
+.paddingB-card{
+  padding-bottom: 7px;
+}
+
+.product-image img{
+  position: relative;
+  transition-duration: 5s;
+  cursor: pointer;
+}
+.product-image img:hover{
+  -ms-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+.widthPg{
+  font-size: 14px;
+  font-weight: 500;
+  color: #868686;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.navCatageory .nav-link.active{
+  color: #fff;
+}

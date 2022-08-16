@@ -1,0 +1,88 @@
+<div class="row soccer-row " >
+  <div class="col-md-2  colPg" *ngFor="let slot of slotArray; let j1=index;">
+      <div class="card mb-2 text-direction-left">
+        <div class="card-body cardCategory ">
+          <div class="row paddingB-card soccer-row ">
+          
+
+            
+
+              
+                  <img class="d-block w-100" src="../../../assets/images/fifa_approved.jpg" 
+                       alt="First slide" class="" width="100%">
+                     
+              
+            
+
+             
+            
+        
+          <div class=" col-md-10 ">
+          <h6 class="text-direction-left distributor-name" title="{{slot.createdDate}}" >{{slot.createdDate}}</h6>
+          <div class="  category-pading">
+            <nav class="nav navCountList ">
+                <a class="nav-link QuantitySpan">
+                  <span> <strong style="font-weight: 600; color: #383838;">Turf :</strong> {{slot.turfName}} </span><br>
+                  <span> <strong style="font-weight: 600; color: #383838;">slot :</strong> {{slot.time}} </span><br>
+                  <span> <strong style="font-weight: 600; color: #383838;">per head :</strong> {{slot.perHead}} </span><br>
+                  <span> <strong style="font-weight: 600; color: #383838;">pay to :</strong> {{slot.payeeName}} </span><br>
+                  <button class="btn btn-primary" (click)="goToViewSlot(slot.slotId)">view</button>
+                  
+                </a>
+               
+               
+              
+                    </nav>
+                </div>
+                
+                <!-- <p class="i-f-600 text-direction-left widthPg">dffff555555ffffff</p> -->
+            
+                
+          </div>
+          </div>
+        </div>
+
+
+ 
+       
+
+
+
+      </div>
+    </div>
+
+
+   
+
+</div>
+<!-- <div class="row">
+  
+
+
+
+
+  <div class="column">
+    <div class="card">
+      <img src="../../../assets/images/fifa_approved.jpg" alt="Mike" height="150px" class="card-img-top">
+      <div class="container">
+        <h2>Mike Ross</h2>
+        <p class="title">Art Director</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>example@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  
+   <div class="column">
+    <div class="card">
+      <img src="../../../assets/images/fifa_approved.jpg" alt="Mike" height="150px" class="card-img-top">
+      <div class="container">
+       
+        <p><button class="button">Add</button></p>
+      </div>
+    </div>
+  </div>
+
+
+  </div> -->

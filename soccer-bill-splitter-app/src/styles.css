@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~ngx-toastr/toastr";
+ @import "~@ng-select/ng-select/themes/default.theme.css";
+/*@import "~@ng-select/ng-select/themes/material.theme.css";
+@import "~@ng-select/ng-select/themes/ant.design.theme.css"; */
+/* You can add global styles to this file, and also import other style files */
+.soccer-row {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+
+  .soccer-col {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+ 
+  .pub-width .ng-select.ng-select-single .ng-select-container{
+    width: 175px !important;
+  }
+  .ng-select .ng-select-container{
+    padding: 0px 10px 0px 14px;
+    font-size: 14px;
+  }
+  .ng-select .ng-select-container .ng-value-container{
+    padding-left: 0;
+  }
+  .ng-select.ng-select-multiple .ng-select-container .ng-value-container{
+    padding-left: 0;
+  }
+  
+  .image_Select .ng-select-container {
+    height: 45px !important;
+  }
+
+  *,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  background-color: #222222;
+}

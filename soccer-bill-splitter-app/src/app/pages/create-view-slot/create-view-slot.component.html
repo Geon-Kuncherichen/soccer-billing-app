@@ -1,0 +1,226 @@
+
+<ng-container>
+
+    <div class="container m-3">
+        <div class="row">
+            <div class="col-lg-4">
+                <img src="../../../assets/images/todo.png" height="700px" width="500px" alt="">
+            </div>
+            <div class="col-lg-8">
+
+                <div class="input-group mb-3 w-100">
+
+                    <div class="col-md-3">
+                        <div class="form-group">
+                        <label for="details" style="font-weight: 600; color: #d90505;" class="float-direction-left">Turf Name
+    
+                        </label>
+                        <ng-select class="soccer-rev-table text-direction-left"  [(ngModel)]="slotObj.turfName"  bindValue="code" bindLabel="display"
+                      placeholder="dfgf">
+
+                      <ng-option [value]="item.display" *ngFor="let item of turfArray;let i=index;">
+                        {{item.display}}</ng-option>
+
+                    </ng-select>
+
+                  
+                        </div></div>
+
+                       
+                        <div class="col-md-1">
+                            </div>
+                        <div class="col-lg-8 col-md-9">
+                            <div class="row soccer-row quantity-row indeal-flex-rev">
+                                <div class="col-lg-3 col-md-12 soccer-col">
+                                  <div class="form-group">
+                                  <label for="quantity" class="float-direction-left" style="color:red">starting time
+                                    
+                                  </label>
+                                   
+                                  <input type="text" minlength=0 maxlength=10 id="quantity" name="quantity" [(ngModel)]="startTime" onDrag="return false" onDrop="return false" onPaste="return false"
+                                   class="mb-1 form-control text-direction-left"placeholder=""/>
+                                  </div>
+                                </div>
+                                <div class="col-lg-3 col-md-12 soccer-col">
+                                  <label style="visibility: hidden;" for="quantity" class="float-direction-left">
+                                    <span class="cib-label-requried soccer-rev-table float-direction-right"style="color:red">*</span>
+                                  </label>
+                                  <span class="error-msg-span  soccer-rev-table float-direction-right" style="color: red"></span>
+                                  <ng-select class="soccer-rev-table text-direction-left"  [(ngModel)]="startTimeIsDay" bindValue="code" bindLabel="display"
+                              placeholder="">
+      
+                              <ng-option [value]="item.display" *ngFor="let item of timeArray;let i=index;">
+                                {{item.display}}</ng-option>
+      
+                            </ng-select>
+                                </div>
+
+
+                                <div class="col-lg-3 col-md-12 soccer-col">
+                                    <div class="form-group">
+                                    <label for="quantity" class="float-direction-left" style="color:red">end time
+                                      
+                                    </label>
+                                     
+                                    <input type="text" minlength=0 maxlength=10 id="quantity" name="quantity" [(ngModel)]="endTime" onDrag="return false" onDrop="return false" onPaste="return false"
+                                     class="mb-1 form-control text-direction-left"placeholder=""/>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-12 soccer-col">
+                                    <label style="visibility: hidden;" for="quantity" class="float-direction-left">
+                                      <span class="cib-label-requried soccer-rev-table float-direction-right"style="color:red">*</span>
+                                    </label>
+                                    <span class="error-msg-span  soccer-rev-table float-direction-right" style="color: red"></span>
+                                    <ng-select class="soccer-rev-table text-direction-left"  [(ngModel)]="endTimeIsDay" bindValue="code" bindLabel="display"
+                                placeholder="">
+        
+                                <ng-option [value]="item.display" *ngFor="let item of timeArray;let i=index;">
+                                  {{item.display}}</ng-option>
+        
+                              </ng-select>
+                                  </div>
+                            </div>
+                        </div>
+                                
+                 
+                        <!-- <div class="col-lg-6 col-md-12">
+                            <input type="text" name="todo" 
+                            placeholder="enter todo" class="form-control"
+                            [(ngModel)]="playerObj.playerName"
+                            >
+                            </div> -->
+               
+                
+                
+                
+                </div>
+
+                
+
+                <div class="input-group mb-3 w-100">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                        <label for="details" style="font-weight: 600; color: #d90505;" class="float-direction-left">per head
+    
+                        </label>
+                        <input type="text" name="todo"  readonly
+                        placeholder="per head" class="form-control"
+                        [(ngModel)]="slotObj.perHead"
+                        >
+
+                  
+                        </div></div>
+
+                        <div class="col-md-1">
+                            </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                            <label for="details" style="font-weight: 600; color: #d90505;" class="float-direction-left">Payee Name
+        
+                            </label>
+                            <ng-select class="soccer-rev-table text-direction-left"  [(ngModel)]="slotObj.payeeId"  bindValue="code" bindLabel="display"
+                            placeholder="dfgf">
+      
+                            <ng-option [value]="item.userId" *ngFor="let item of userNameList;let i=index;">
+                              {{item.userName}}</ng-option>
+      
+                          </ng-select>
+    
+                      
+                            </div></div>
+
+                            <div class="col-md-1">
+                            </div>
+                
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                <label for="details" style="font-weight: 600; color: #d90505;" class="float-direction-left">Total amount
+            
+                                </label>
+                                <input type="text" name="todo"  (input)="calculatePerHead()"
+                                placeholder="Total Amount" class="form-control"
+                                [(ngModel)]="slotObj.totalAmount"
+                                >
+        
+                          
+                                </div></div>
+                
+                </div>
+
+
+                <div class="input-group mb-3 w-100">
+                </div><div class="input-group mb-3 w-100">
+                </div>
+
+                <div class="input-group mb-3 w-100">
+                    <input type="text" name="todo" 
+                    placeholder="Please Enter Player Name here" class="form-control"
+                    [(ngModel)]="playerObj.playerName"
+                    >
+                <div class="input-group-append">
+                    <button class="btn btn-primary" (click)="addPlayer()">Add Players</button>
+                </div>
+                
+                
+                
+                </div>
+
+                
+                
+    
+    
+          <ul class="list-group w-100" *ngFor="let player of playerList">
+        <li class="list-group-item d-flex justify-content-between w-100">
+            <!-- <span>
+                <input type="checkbox" [checked]="item.isCompleted"  >
+            </span> -->
+            
+            <span >
+               <span style="font-weight: 600; color: #383838;"> Name: </span>  {{player.playerName | titlecase}}
+            </span>
+    
+            <!-- <span >
+                <span style="font-weight: 600; color: #383838;">Paid date: </span> {{player.paidDate | titlecase}}
+            </span> -->
+            <span  *ngIf="player.status==0">
+               <span style="font-weight: 600; color: #383838;">Status: </span> Not paid
+            </span>
+
+            <span  *ngIf="player.status==1">
+                <span style="font-weight: 600; color: #383838;">Status: </span> Paid
+             </span>
+          
+    
+            <span>
+                <fa-icon [icon]="faTrash" (click)="removePlayer(player)"></fa-icon>
+            </span>
+    
+        </li>
+    </ul>
+
+
+
+    <div class="input-group mb-3 w-100">
+
+        </div>
+
+
+    <div class="input-group mb-3 w-100">
+       
+    <div class="input-group-append">
+        <button class="btn btn-primary" (click)="addSlot()">Save slot</button>
+    </div>
+    
+    
+    
+    </div>
+
+
+            </div>
+        </div>
+        
+        
+        </div>
+</ng-container>
